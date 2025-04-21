@@ -39,10 +39,12 @@ python scripts/download_cve_json.py
 
 This will download and save the latest CVE data to the data/cve/ folder:
 data/cve/
+```bash
 ├── nvdcve-1.1-2023.json.gz
 ├── nvdcve-1.1-2024.json.gz
 ├── nvdcve-1.1-recent.json.gz
 └── nvdcve-1.1-modified.json.gz
+```
 
 You can extract and inspect them with gunzip and jq, e.g.:
 ```bash
@@ -55,6 +57,7 @@ gunzip -c data/cve/nvdcve-1.1-2023.json.gz | jq '.CVE_Items | length'
 
 ## Project Structure
 opennvd-core/
+```bash
 ├── data/              # CVE and CWE data folders
 │   └── cve/           # CVE JSON files (.gitkeep committed, actual data ignored)
 ├── docs/              # Documentation and project specs
@@ -63,7 +66,7 @@ opennvd-core/
 ├── venv/              # Local virtual environment (not committed)
 ├── LICENSE
 └── README.md
-
+```
 
 ## Roadmap
 
